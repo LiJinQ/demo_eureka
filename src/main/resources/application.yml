@@ -11,9 +11,10 @@ eureka:
       defaultZone: http://admin:123456@${eureka.instance.hostname}:${server.port}/eureka/
 
 # 安全认证的配置
-security:
-  basic:
-    enabled: true
-  user:
-    name: admin  # 用户名
-    password: 123456   # 用户密码
+spring:
+  security:
+    basic:
+      enabled: true
+    user:
+      name: admin  # 用户名
+      password: 123456   # 用户密码
