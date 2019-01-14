@@ -8,7 +8,7 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://admin:123456@${eureka.instance.hostname}:${server.port}/eureka/
 
 # 安全认证的配置
 security:
