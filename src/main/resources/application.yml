@@ -15,5 +15,5 @@ security:
   basic:
     enabled: true
   user:
-    name: ljq  # 用户名
+    name: admin  # 用户名
     password: 123456   # 用户密码
