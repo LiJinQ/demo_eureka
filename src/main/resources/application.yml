@@ -5,16 +5,13 @@ eureka:
   instance:
     hostname: localhost
   client:
+    #服务器端不注册eureka
     registerWithEureka: false
+    #服务器端不需要抓取服务列表
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://admin:123456@${eureka.instance.hostname}:${server.port}/eureka/
-
-# 安全认证的配置
-spring:
-  security:
-    basic:
-      enabled: true
-    user:
-      name: admin  # 用户名
-      password: 123456   # 用户密码
+      #注册中心地址
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enable-self-preservation: false # 设为false，关闭自我保护
+    eviction-interval-timer-in-ms: 40000  # 清理间隔（单位毫秒，默认是60*1000）
